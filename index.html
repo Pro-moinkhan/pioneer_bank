@@ -35,7 +35,7 @@
             <div class="col col-lg-4 col-md-6 col-sm-12">
                 <div class="withdraw provider">
                     <h2>Width Draw</h2>
-                    <h5>$00</h5>
+                    <h5>$ <span id="currentWithdraw">00</span></h5>
                 </div>
             </div>
             <div class="col col-lg-4 col-md-6 col-sm-12">
@@ -91,13 +91,14 @@
             return Float;
         }
 
-        // withdraw deposit:
+        // withdraw btn event handler:
         const withdrawBtn = document.getElementById("addWithdraw");
         withdrawBtn.addEventListener('click', function(){
-            const gettingNumber = inputNumber("withdrawAmount")
-            console.log(gettingNumber);
-        })
-
+            const gettingNumber = inputNumber("withdrawAmount");
+            updateSpanText("currentWithdraw", gettingNumber);
+            updateSpanText("currenBalance", -1*gettingNumber);
+            document.getElementById("withdrawAmount").value = "";
+        })    
         function updateSpanText(id, depositFloat){
             const current = document.getElementById(id).innerText;
             const currentFloat = parseFloat(current);
