@@ -1,0 +1,33 @@
+#login_area{
+    margin: 100px 3em;
+}
+.login_text{
+    color: rgb(27, 139, 27);
+}
+.submit_area{
+    margin-top: 4em;
+    border-radius: 1em;
+    box-shadow: 2px 5px 20px gray;
+    padding: 3em;
+}
+#transaction_area{
+    display:none;
+    margin: 10em 3em;
+}
+.provider{
+    color: white;
+    padding: 2em 1em;
+    margin: 1em 3em;
+    border-radius: 1.2em;
+    box-shadow: 0.5px 3px 25px gray;
+}
+.deposit{
+    background: linear-gradient(245deg, skyblue, slateblue);
+}
+.withdraw{
+    background: linear-gradient(245deg, orange, tomato);
+}
+.balance{
+    background: linear-gradient(245deg, lightgreen, green);
+
+}
